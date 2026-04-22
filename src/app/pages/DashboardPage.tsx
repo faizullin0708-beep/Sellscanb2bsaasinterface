@@ -69,88 +69,92 @@ export default function DashboardPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <AnimatedCard delay={0.1}>
-        <Card>
-          <CardHeader className="pb-3">
-            <CardDescription>Выручка вчера</CardDescription>
-            <CardTitle className="text-3xl">₽650,000</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center gap-2 text-sm text-success">
-              <ArrowUp className="w-4 h-4" />
-              <span>+12.5% к пред. дню</span>
-            </div>
-          </CardContent>
-        </Card>
+          <Card>
+            <CardHeader className="pb-3">
+              <CardDescription>Выручка вчера</CardDescription>
+              <CardTitle className="text-3xl">₽650,000</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex items-center gap-2 text-sm text-success">
+                <ArrowUp className="w-4 h-4" />
+                <span>+12.5% к пред. дню</span>
+              </div>
+            </CardContent>
+          </Card>
+        </AnimatedCard>
 
-        <Card>
-          <CardHeader className="pb-3">
-            <CardDescription>Прибыль вчера</CardDescription>
-            <CardTitle className="text-3xl">₽195,000</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center gap-2 text-sm text-success">
-              <ArrowUp className="w-4 h-4" />
-              <span>+8.3% к пред. дню</span>
-            </div>
-          </CardContent>
-        </Card>
+        <AnimatedCard delay={0.15}>
+          <Card>
+            <CardHeader className="pb-3">
+              <CardDescription>Прибыль вчера</CardDescription>
+              <CardTitle className="text-3xl">₽195,000</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex items-center gap-2 text-sm text-success">
+                <ArrowUp className="w-4 h-4" />
+                <span>+8.3% к пред. дню</span>
+              </div>
+            </CardContent>
+          </Card>
         </AnimatedCard>
 
         <AnimatedCard delay={0.2}>
-        <Card>
-          <CardHeader className="pb-3">
-            <CardDescription>Средняя маржа</CardDescription>
-            <CardTitle className="text-3xl">30%</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span>Цель: 35%</span>
-            </div>
-          </CardContent>
-        </Card>
+          <Card>
+            <CardHeader className="pb-3">
+              <CardDescription>Средняя маржа</CardDescription>
+              <CardTitle className="text-3xl">30%</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <span>Цель: 35%</span>
+              </div>
+            </CardContent>
+          </Card>
         </AnimatedCard>
 
         <AnimatedCard delay={0.25}>
-        <Card>
-          <CardHeader className="pb-3">
-            <CardDescription>SKU в убытке</CardDescription>
-            <CardTitle className="text-3xl text-destructive">23</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center gap-2 text-sm text-destructive">
-              <AlertCircle className="w-4 h-4" />
-              <span>Требует внимания</span>
-            </div>
-          </CardContent>
-        </Card>
+          <Card>
+            <CardHeader className="pb-3">
+              <CardDescription>SKU в убытке</CardDescription>
+              <CardTitle className="text-3xl text-destructive">23</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex items-center gap-2 text-sm text-destructive">
+                <AlertCircle className="w-4 h-4" />
+                <span>Требует внимания</span>
+              </div>
+            </CardContent>
+          </Card>
+        </AnimatedCard>
 
-        <Card>
-          <CardHeader className="pb-3">
-            <CardDescription>Низкий остаток</CardDescription>
-            <CardTitle className="text-3xl text-warning">8</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center gap-2 text-sm text-warning">
-              <Package className="w-4 h-4" />
-              <span>&lt;7 дней</span>
-            </div>
-          </CardContent>
-        </Card>
+        <AnimatedCard delay={0.3}>
+          <Card>
+            <CardHeader className="pb-3">
+              <CardDescription>Низкий остаток</CardDescription>
+              <CardTitle className="text-3xl text-warning">8</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex items-center gap-2 text-sm text-warning">
+                <Package className="w-4 h-4" />
+                <span>&lt;7 дней</span>
+              </div>
+            </CardContent>
+          </Card>
         </AnimatedCard>
 
         <AnimatedCard delay={0.35}>
-        <Card>
-          <CardHeader className="pb-3">
-            <CardDescription>Процент возвратов</CardDescription>
-            <CardTitle className="text-3xl">4.2%</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center gap-2 text-sm text-success">
-              <ArrowDown className="w-4 h-4" />
-              <span>-0.5% к пред. неделе</span>
-            </div>
-          </CardContent>
-        </Card>
+          <Card>
+            <CardHeader className="pb-3">
+              <CardDescription>Процент возвратов</CardDescription>
+              <CardTitle className="text-3xl">4.2%</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex items-center gap-2 text-sm text-success">
+                <ArrowDown className="w-4 h-4" />
+                <span>-0.5% к пред. неделе</span>
+              </div>
+            </CardContent>
+          </Card>
         </AnimatedCard>
       </div>
 
