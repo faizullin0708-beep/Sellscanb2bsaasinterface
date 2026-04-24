@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { cn } from "./ui/utils";
 import { AnimatePresence } from "motion/react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navigation = [
   { name: "Личный кабинет", href: "/app/profile", icon: User },
@@ -57,7 +58,11 @@ export default function DashboardLayout() {
           })}
         </nav>
 
-        <div className="p-4 border-t border-border">
+        <div className="p-4 border-t border-border space-y-2">
+          <div className="flex items-center justify-between px-3 py-2">
+            <span className="text-sm text-muted-foreground">Тема</span>
+            <ThemeToggle />
+          </div>
           <button className="flex items-center gap-3 px-3 py-2 w-full rounded-lg text-foreground hover:bg-accent transition-colors">
             <LogOut className="w-5 h-5" />
             <span>Выйти</span>

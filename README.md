@@ -1,7 +1,7 @@
 
-  # SellScan B2B SaaS Interface
+  # Untitled
 
-  This is a code bundle for SellScan B2B SaaS Interface. The original project is available at https://www.figma.com/design/JjK6deMeRmIOpXTO5xxHsj/SellScan-B2B-SaaS-Interface.
+  This is a code bundle for Untitled. The original project is available at https://www.figma.com/design/JjK6deMeRmIOpXTO5xxHsj/Untitled.
 
   ## Running the code
 

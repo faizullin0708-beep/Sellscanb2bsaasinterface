@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../co
 import { Badge } from "../components/ui/badge";
 import { BarChart3, TrendingUp, AlertTriangle, Package, CheckCircle, ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
+import { ThemeToggle } from "../components/ThemeToggle";
 
 export default function LandingPage() {
   return (
@@ -12,6 +13,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="text-xl text-primary">SellScan</div>
           <div className="flex items-center gap-4">
+            <ThemeToggle />
             <Link to="/signin">
               <Button variant="ghost">Войти</Button>
             </Link>
@@ -221,13 +223,21 @@ export default function LandingPage() {
           <p className="text-muted-foreground">Выберите план для вашего бизнеса</p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
-          <Card>
-            <CardHeader>
-              <CardTitle>Starter</CardTitle>
-              <div className="text-3xl mt-4">₽4,990<span className="text-base text-muted-foreground">/мес</span></div>
+          <Card className="relative">
+            <CardHeader className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Package className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <CardTitle className="mb-1">Starter</CardTitle>
+                  <p className="text-sm text-muted-foreground">Базовые метрики продавца</p>
+                </div>
+              </div>
+              <div className="text-4xl">₽2,990<span className="text-lg text-muted-foreground">/МО</span></div>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <ul className="space-y-2 text-sm">
+            <CardContent className="space-y-6">
+              <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
                   <span>До 100 SKU</span>
@@ -241,44 +251,74 @@ export default function LandingPage() {
                   <span>Базовая аналитика</span>
                 </li>
               </ul>
-              <Button variant="outline" className="w-full">Начать</Button>
+              <div className="space-y-2">
+                <Button variant="outline" className="w-full gap-2">
+                  Начать <ArrowRight className="w-4 h-4" />
+                </Button>
+                <p className="text-xs text-muted-foreground text-center">Без привязки карты • Можно отменить в любой момент</p>
+              </div>
             </CardContent>
           </Card>
-          <Card className="border-primary shadow-lg">
-            <CardHeader>
-              <Badge className="mb-2 w-fit">Популярный</Badge>
-              <CardTitle>Growth</CardTitle>
-              <div className="text-3xl mt-4">₽12,990<span className="text-base text-muted-foreground">/мес</span></div>
+
+          <Card className="relative border-primary shadow-xl bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+              <Badge className="bg-white text-primary shadow-md">⭐ Рекомендуем</Badge>
+            </div>
+            <CardHeader className="space-y-4 pt-6">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center flex-shrink-0">
+                  <TrendingUp className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <CardTitle className="mb-1 text-white">Growth</CardTitle>
+                  <p className="text-sm text-primary-foreground/80">Для растущего бизнеса</p>
+                </div>
+              </div>
+              <div className="text-4xl text-white">₽7,990<span className="text-lg text-primary-foreground/80">/МО</span></div>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <ul className="space-y-2 text-sm">
+            <CardContent className="space-y-6">
+              <ul className="space-y-3 text-sm text-primary-foreground/90">
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
                   <span>До 500 SKU</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
                   <span>Все маркетплейсы</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
                   <span>Умные алерты</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
                   <span>Telegram интеграция</span>
                 </li>
               </ul>
-              <Button className="w-full">Начать</Button>
+              <div className="space-y-2">
+                <Button className="w-full gap-2 bg-white text-primary hover:bg-white/90">
+                  Выбрать Growth <ArrowRight className="w-4 h-4" />
+                </Button>
+                <p className="text-xs text-primary-foreground/70 text-center">Без привязки карты • Можно отменить в любой момент</p>
+              </div>
             </CardContent>
           </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>Pro</CardTitle>
-              <div className="text-3xl mt-4">₽24,990<span className="text-base text-muted-foreground">/мес</span></div>
+
+          <Card className="relative">
+            <CardHeader className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <BarChart3 className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <CardTitle className="mb-1">Pro</CardTitle>
+                  <p className="text-sm text-muted-foreground">Максимальные возможности</p>
+                </div>
+              </div>
+              <div className="text-4xl">₽17,990<span className="text-lg text-muted-foreground">/МО</span></div>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <ul className="space-y-2 text-sm">
+            <CardContent className="space-y-6">
+              <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
                   <span>Unlimited SKU</span>
@@ -296,7 +336,12 @@ export default function LandingPage() {
                   <span>Приоритетная поддержка</span>
                 </li>
               </ul>
-              <Button variant="outline" className="w-full">Связаться</Button>
+              <div className="space-y-2">
+                <Button variant="outline" className="w-full gap-2">
+                  Начать <ArrowRight className="w-4 h-4" />
+                </Button>
+                <p className="text-xs text-muted-foreground text-center">Без привязки карты • Можно отменить в любой момент</p>
+              </div>
             </CardContent>
           </Card>
         </div>
