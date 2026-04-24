@@ -234,7 +234,7 @@ export default function LandingPage() {
                   <p className="text-sm text-muted-foreground">Базовые метрики продавца</p>
                 </div>
               </div>
-              <div className="text-4xl">₽2,990<span className="text-lg text-muted-foreground">/МО</span></div>
+              <div className="text-4xl">₽2,990<span className="text-lg text-muted-foreground">/МЕС</span></div>
             </CardHeader>
             <CardContent className="space-y-6">
               <ul className="space-y-3 text-sm">
@@ -274,7 +274,7 @@ export default function LandingPage() {
                   <p className="text-sm text-primary-foreground/80">Для растущего бизнеса</p>
                 </div>
               </div>
-              <div className="text-4xl text-white">₽7,990<span className="text-lg text-primary-foreground/80">/МО</span></div>
+              <div className="text-4xl text-white">₽7,990<span className="text-lg text-primary-foreground/80">/МЕС</span></div>
             </CardHeader>
             <CardContent className="space-y-6">
               <ul className="space-y-3 text-sm text-primary-foreground/90">
@@ -315,7 +315,7 @@ export default function LandingPage() {
                   <p className="text-sm text-muted-foreground">Максимальные возможности</p>
                 </div>
               </div>
-              <div className="text-4xl">₽17,990<span className="text-lg text-muted-foreground">/МО</span></div>
+              <div className="text-4xl">₽17,990<span className="text-lg text-muted-foreground">/МЕС</span></div>
             </CardHeader>
             <CardContent className="space-y-6">
               <ul className="space-y-3 text-sm">
